@@ -39,22 +39,13 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href="/projects">
+              <Link href="/about#resume">
                 <motion.button
                   className="btn-primary w-full sm:w-auto"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  View Projects
-                </motion.button>
-              </Link>
-              <Link href="/contact">
-                <motion.button
-                  className="btn-secondary w-full sm:w-auto"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get in Touch
+                  View Resume
                 </motion.button>
               </Link>
             </motion.div>
@@ -79,9 +70,6 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-[var(--foreground)]">
               Featured Projects
             </h2>
-            <p className="text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              A selection of my recent work showcasing AI-powered applications and modern web experiences.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

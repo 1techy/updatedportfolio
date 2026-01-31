@@ -7,11 +7,12 @@
   --background: #fafafa;
   --foreground: #0a0a0a;
   --card: #ffffff;
+  --card-rgb: 255, 255, 255;
   --card-border: #e5e5e5;
   --muted: #f5f5f5;
   --muted-foreground: #737373;
-  --accent: #991b1b;
-  --accent-dark: #7f1d1d;
+  --accent: #f18500;
+  --accent-dark: #c76d00;
 }
 
 .dark {
@@ -19,11 +20,12 @@
   --background: #0a0a0a;
   --foreground: #fafafa;
   --card: #171717;
+  --card-rgb: 23, 23, 23;
   --card-border: #262626;
   --muted: #1a1a1a;
   --muted-foreground: #a3a3a3;
-  --accent: #991b1b;
-  --accent-dark: #7f1d1d;
+  --accent: #f18500;
+  --accent-dark: #c76d00;
 }
 
 @layer base {
@@ -43,7 +45,8 @@
 
 @layer components {
   .glass-card {
-    @apply bg-[var(--card)]/80 backdrop-blur-sm border border-[var(--card-border)] rounded-xl;
+    @apply backdrop-blur-sm border border-[var(--card-border)] rounded-xl;
+    background-color: rgba(var(--card-rgb), 0.8);
   }
 
   .btn-primary {
@@ -66,14 +69,14 @@
     left: 50%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(153, 27, 27, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(241, 133, 0, 0.15) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     animation: glow 3s ease-in-out infinite;
     pointer-events: none;
   }
 
   .dark .gradient-glow::before {
-    background: radial-gradient(circle, rgba(153, 27, 27, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(241, 133, 0, 0.15) 0%, transparent 70%);
   }
 }
 

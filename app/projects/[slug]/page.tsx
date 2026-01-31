@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,9 +10,10 @@ import { getProjectBySlug, projects } from "@/data/projects";
 export default function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = getProjectBySlug(params.slug);
+  const { slug } = use(params);
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
@@ -241,32 +243,8 @@ export default function ProjectDetailPage({
             </motion.section>
           )}
         </div>
-
-        {/* Navigation to other projects */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-16 pt-8 border-t border-[var(--card-border)]"
-        >
-          <Link href="/projects">
-            <motion.button
-              className="btn-secondary w-full sm:w-auto"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View All Projects
-            </motion.button>
-          </Link>
-        </motion.div>
       </div>
     </div>
   );
 }
 
-// Generate static params for all projects
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
-}
