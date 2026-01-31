@@ -19,10 +19,10 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-[var(--foreground)]">
-            Let's Connect
+            Let&apos;s Connect
           </h1>
           <p className="text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto">
-            I'm always interested in hearing about new projects, opportunities, and collaborations.
+            I&apos;m always interested in hearing about new projects, opportunities, and collaborations.
           </p>
         </motion.div>
 

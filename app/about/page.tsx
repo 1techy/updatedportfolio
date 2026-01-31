@@ -184,7 +184,7 @@ export default function AboutPage() {
         >
           <div className="glass-card p-8 bg-gradient-to-br from-[var(--accent)]/5 to-transparent border-[var(--accent)]/20">
             <h2 className="text-2xl font-display font-bold mb-4 text-[var(--foreground)]">
-              What I'm Building Now
+              What I&apos;m Building Now
             </h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed">
               {personalData.bio.currentFocus}

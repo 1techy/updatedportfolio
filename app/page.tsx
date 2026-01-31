@@ -117,10 +117,10 @@ export default function Home() {
             className="glass-card p-8 md:p-12"
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-[var(--foreground)]">
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </h2>
             <p className="text-lg text-[var(--muted-foreground)] mb-8">
-              Have a project in mind? I'm always interested in hearing about new opportunities and collaborations.
+              Have a project in mind? I&apos;m always interested in hearing about new opportunities and collaborations.
             </p>
             <Link href="/contact">
               <motion.button
