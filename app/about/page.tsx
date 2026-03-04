@@ -53,7 +53,7 @@ export default function AboutPage() {
                 Resume
               </h2>
               <a
-                href="/AtharvaKhairnar_Resume.pdf"
+                href="/AtharvasResume_March.pdf"
                 download
                 className="btn-primary flex items-center gap-2"
               >
