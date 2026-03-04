@@ -75,7 +75,7 @@ export default function AboutPage() {
             </div>
             <div className="w-full h-[800px] border border-[var(--card-border)] rounded-lg overflow-hidden">
               <iframe
-                src="/AtharvaKhairnar_Resume.pdf"
+                src="/AtharvasResume_March.pdf"
                 className="w-full h-full"
                 title="Resume"
               />
